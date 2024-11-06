@@ -23,3 +23,14 @@ async function bubble() {
     }
     ele[0].style.background = 'green';
 }
+
+const bubSortbtn = document.querySelector(".bubbleSort");
+bubSortbtn.addEventListener('click', async function(){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArrayBtn();
+    await bubble();
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArrayBtn();
+});

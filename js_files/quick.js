@@ -61,3 +61,17 @@ async function quickSort(ele, l, r){
         }
     }
 }
+
+const quickSortbtn = document.querySelector(".quickSort");
+quickSortbtn.addEventListener('click', async function(){
+    let ele = document.querySelectorAll('.bar');
+    let l = 0;
+    let r = ele.length - 1;
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArrayBtn();
+    await quickSort(ele, l, r);
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArrayBtn();
+});
